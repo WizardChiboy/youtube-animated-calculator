@@ -1,0 +1,144 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Full-Screen Background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a); /* Darker gradient */
+  overflow: hidden;
+  color: #fff; /* Light text on dark background */
+}
+
+/* Glassmorphism Calculator */
+.calculator {
+  width: 350px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6); /* Darker glass effect */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7); /* Darker shadow */
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Expression Input */
+.expression {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1); /* Darker input background */
+  border-radius: 10px;
+  text-align: right;
+  font-size: 1.8rem;
+  padding: 10px;
+  color: white;
+  outline: none;
+}
+
+/* Result Display */
+.result {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Darker background for result */
+  border-radius: 10px;
+  text-align: right;
+  font-size: 2.2rem;
+  padding: 10px;
+  color: #00ff99;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00ff99;
+  animation: fadeIn 0.3s ease-in-out;
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Calculator Buttons */
+.btn {
+  height: 60px;
+  border: none;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Darker button background */
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Effect */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2); /* Lighter hover effect */
+  transform: scale(1.1);
+}
+
+/* Operator & Special Buttons */
+.operator {
+  background: rgba(255, 0, 255, 0.3);
+}
+
+.operator:hover {
+  background: rgba(255, 0, 255, 0.5);
+}
+
+.equals {
+  background: rgba(0, 255, 0, 0.4);
+  grid-column: span 2;
+}
+
+.equals:hover {
+  background: rgba(0, 255, 0, 0.6);
+}
+
+.clear {
+  background: rgba(255, 0, 0, 0.4);
+}
+
+.clear:hover {
+  background: rgba(255, 0, 0, 0.6);
+}
+
+.delete {
+  background: rgba(255, 165, 0, 0.4);
+}
+
+.delete:hover {
+  background: rgba(255, 165, 0, 0.6);
+}
+
+/* Zero Button */
+.zero {
+  grid-column: span 2;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
